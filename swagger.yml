@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: API REST TEST CONNEXION AND SWAGGER
+  version: "1.0.0"
+  title: API REST ANIBAL
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Urls supported by app
+paths:
+  /people:
+    get:
+      operationId: "people.get_all"
+      tags:
+        - "People"
+      summary: "The people data structure"
+      description: "Read the list of people"
+      responses:
+        200:
+          description: "Successful read people list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                fname:
+                  type: "string"
+                lname:
+                  type: "string"
+                lasttime:
+                  type: "string"
